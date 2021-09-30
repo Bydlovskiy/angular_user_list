@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.container {
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    justify-content: center;
+}
+
+.SignForm {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttonsAddOrEvents {
+    position: relative;
+}
+
+.buttonEdit {
+    position: absolute;
+    left: 0;
+}
+
+.table {
+    margin: 40px 0 0 30px;
+    width: 50%;
+    height: 300px;
+}
+
+tr {
+    display: flex;
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableCounter {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.tableInputs {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.tableButtons {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}

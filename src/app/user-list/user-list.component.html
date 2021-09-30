@@ -1,0 +1,47 @@
+<div class="container">
+  <form class="SignForm" name="SignForm">
+    <span>login</span>
+    <input [(ngModel)]="login" name="login" [style.border]="loginValidStyle" class="form-control" type="text"
+      [placeholder]="loginPlaceholder">
+    <span>password</span>
+    <input [(ngModel)]="password" name="password" [style.border]="passwordValidStyle" class="form-control"
+      type="password" [placeholder]="passwordPlaceholder">
+    <span>Email address</span>
+    <input [(ngModel)]="email" name="email" [style.border]="emailValidStyle" class="form-control" type="text"
+      [placeholder]="emailPlaceholder">
+    <div class="buttonsAddOrEvents">
+      <button *ngIf="!isEdit" (click)="addUser()" name="buttonAdd" class="btn btn-success " type="button">Add
+        user</button>
+      <button *ngIf="isEdit" (click)="updateUser()" class="buttonEdit btn btn-outline-success" name="buttonEdit"
+        type="button">Edit user</button>
+    </div>
+  </form>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th class="tableCounter">#</th>
+          <th class="tableInputs">Login</th>
+          <th class="tableInputs">Password</th>
+          <th class="tableInputs">Email</th>
+          <th class="tableButtons">Edit</th>
+          <th class="tableButtons">Delete</th>
+        </tr>
+        <tr *ngFor="let user of userList ; let i = index">
+          <td class="tableCounter">{{ i + 1 }}</td>
+          <td class="tableInputs">{{user.login}}</td>
+          <td class="tableInputs">{{user.password}}</td>
+          <td class="tableInputs">{{user.email}}</td>
+          <td class="tableButtons">
+            <button (click)="editUser(i)" class="btn btn-danger" type="button">Edit</button>
+          </td>
+          <td class="tableButtons">
+            <button (click)="deleteUser(i)" class="btn btn-warning" type="button">Delete</button>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
